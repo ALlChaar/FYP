@@ -1,5 +1,5 @@
 import SwiftUI
-import RealityKit
+import QuickLook
 
 struct ScanPreviewView: View {
     let modelURL: URL
@@ -9,46 +9,44 @@ struct ScanPreviewView: View {
 
     var body: some View {
         NavigationStack {
-            ZStack {
-                Color.black.ignoresSafeArea()
-
-                Model3D(url: modelURL) { phase in
-                    switch phase {
-                    case .empty:
-                        ProgressView().tint(.white)
-                    case .success(let model):
-                        model
-                            .resizable()
-                            .scaledToFit()
-                            .padding(20)
-                    case .failure(let error):
-                        VStack(spacing: 12) {
-                            Image(systemName: "exclamationmark.triangle.fill")
-                                .font(.system(size: 40))
-                                .foregroundStyle(.yellow)
-                            Text("Could not load model")
-                                .font(.headline)
-                                .foregroundStyle(.white)
-                            Text(error.localizedDescription)
-                                .font(.caption)
-                                .foregroundStyle(.white.opacity(0.7))
-                                .multilineTextAlignment(.center)
-                                .padding(.horizontal, 24)
-                        }
-                    @unknown default:
-                        EmptyView()
+            USDZQuickLookView(url: modelURL)
+                .ignoresSafeArea()
+                .navigationTitle(title)
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button("Done") { dismiss() }
                     }
                 }
-            }
-            .navigationTitle(title)
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbarColorScheme(.dark, for: .navigationBar)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button("Done") { dismiss() }
-                        .foregroundStyle(.white)
-                }
-            }
+        }
+    }
+}
+
+private struct USDZQuickLookView: UIViewControllerRepresentable {
+    let url: URL
+
+    func makeCoordinator() -> Coordinator { Coordinator(url: url) }
+
+    func makeUIViewController(context: Context) -> QLPreviewController {
+        let vc = QLPreviewController()
+        vc.dataSource = context.coordinator
+        return vc
+    }
+
+    func updateUIViewController(_ uiViewController: QLPreviewController, context: Context) {
+        context.coordinator.url = url
+        uiViewController.reloadData()
+    }
+
+    final class Coordinator: NSObject, QLPreviewControllerDataSource {
+        var url: URL
+        init(url: URL) { self.url = url }
+
+        func numberOfPreviewItems(in controller: QLPreviewController) -> Int { 1 }
+
+        func previewController(_ controller: QLPreviewController,
+                               previewItemAt index: Int) -> QLPreviewItem {
+            url as QLPreviewItem
         }
     }
 }
