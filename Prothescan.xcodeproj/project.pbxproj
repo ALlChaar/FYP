@@ -7,48 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0E49DF02FB6800000890C88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0E49DEF2FB6800000890C88 /* Assets.xcassets */; };
 		B025F2AD2FB51DA9001FC547 /* ProstheScanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025F29D2FB51DA9001FC547 /* ProstheScanApp.swift */; };
 		B0E49DE62FB66A6000890C88 /* RealityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B025F2BC2FB51E44001FC547 /* RealityKit.framework */; };
-		A0E49DF02FB6800000890C88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0E49DEF2FB6800000890C88 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A0E49DEF2FB6800000890C88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B025F2892FB51C4D001FC547 /* Prothescan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prothescan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B025F29D2FB51DA9001FC547 /* ProstheScanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProstheScanApp.swift; sourceTree = "<group>"; };
 		B025F2BC2FB51E44001FC547 /* RealityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealityKit.framework; path = System/Library/Frameworks/RealityKit.framework; sourceTree = SDKROOT; };
-		A0E49DEF2FB6800000890C88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B025F29C2FB51DA9001FC547 /* Models */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			explicitFileTypes = {};
-			explicitFolders = (
-			);
 			path = Models;
 			sourceTree = "<group>";
 		};
 		B025F2A02FB51DA9001FC547 /* Stores */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			explicitFileTypes = {};
-			explicitFolders = (
-			);
 			path = Stores;
 			sourceTree = "<group>";
 		};
 		B025F2A22FB51DA9001FC547 /* Theme */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			explicitFileTypes = {};
-			explicitFolders = (
-			);
 			path = Theme;
 			sourceTree = "<group>";
 		};
 		B025F2AB2FB51DA9001FC547 /* Views */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			explicitFileTypes = {};
-			explicitFolders = (
-			);
 			path = Views;
 			sourceTree = "<group>";
 		};
