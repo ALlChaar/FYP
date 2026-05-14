@@ -6,23 +6,51 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B025F2AC2FB51DA9001FC547 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025F2AA2FB51DA9001FC547 /* ShareSheet.swift */; };
+		B025F2AD2FB51DA9001FC547 /* ProstheScanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025F29D2FB51DA9001FC547 /* ProstheScanApp.swift */; };
+		B025F2AE2FB51DA9001FC547 /* ScanManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025F29F2FB51DA9001FC547 /* ScanManager.swift */; };
+		B025F2AF2FB51DA9001FC547 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025F2A12FB51DA9001FC547 /* AppTheme.swift */; };
+		B025F2B02FB51DA9001FC547 /* PatientListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025F2A72FB51DA9001FC547 /* PatientListView.swift */; };
+		B025F2B12FB51DA9001FC547 /* ScanCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025F2A82FB51DA9001FC547 /* ScanCaptureView.swift */; };
+		B025F2B22FB51DA9001FC547 /* ScanType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025F29B2FB51DA9001FC547 /* ScanType.swift */; };
+		B025F2B32FB51DA9001FC547 /* ScanRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025F2A92FB51DA9001FC547 /* ScanRowView.swift */; };
+		B025F2B42FB51DA9001FC547 /* DeviceUnsupportedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025F2A42FB51DA9001FC547 /* DeviceUnsupportedView.swift */; };
+		B025F2B52FB51DA9001FC547 /* PatientDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025F2A62FB51DA9001FC547 /* PatientDetailView.swift */; };
+		B025F2B62FB51DA9001FC547 /* MeasurementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025F2A52FB51DA9001FC547 /* MeasurementsView.swift */; };
+		B025F2B72FB51DA9001FC547 /* ScanRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025F29A2FB51DA9001FC547 /* ScanRecord.swift */; };
+		B025F2B82FB51DA9001FC547 /* PatientStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025F29E2FB51DA9001FC547 /* PatientStore.swift */; };
+		B025F2B92FB51DA9001FC547 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025F2992FB51DA9001FC547 /* Patient.swift */; };
+		B025F2BA2FB51DA9001FC547 /* AddPatientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B025F2A32FB51DA9001FC547 /* AddPatientView.swift */; };
+		B0E49DE62FB66A6000890C88 /* RealityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B025F2BC2FB51E44001FC547 /* RealityKit.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		B025F2892FB51C4D001FC547 /* Prothescan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prothescan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B025F2992FB51DA9001FC547 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		B025F29A2FB51DA9001FC547 /* ScanRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanRecord.swift; sourceTree = "<group>"; };
+		B025F29B2FB51DA9001FC547 /* ScanType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanType.swift; sourceTree = "<group>"; };
+		B025F29D2FB51DA9001FC547 /* ProstheScanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProstheScanApp.swift; sourceTree = "<group>"; };
+		B025F29E2FB51DA9001FC547 /* PatientStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientStore.swift; sourceTree = "<group>"; };
+		B025F29F2FB51DA9001FC547 /* ScanManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanManager.swift; sourceTree = "<group>"; };
+		B025F2A12FB51DA9001FC547 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		B025F2A32FB51DA9001FC547 /* AddPatientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPatientView.swift; sourceTree = "<group>"; };
+		B025F2A42FB51DA9001FC547 /* DeviceUnsupportedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUnsupportedView.swift; sourceTree = "<group>"; };
+		B025F2A52FB51DA9001FC547 /* MeasurementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementsView.swift; sourceTree = "<group>"; };
+		B025F2A62FB51DA9001FC547 /* PatientDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDetailView.swift; sourceTree = "<group>"; };
+		B025F2A72FB51DA9001FC547 /* PatientListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientListView.swift; sourceTree = "<group>"; };
+		B025F2A82FB51DA9001FC547 /* ScanCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCaptureView.swift; sourceTree = "<group>"; };
+		B025F2A92FB51DA9001FC547 /* ScanRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanRowView.swift; sourceTree = "<group>"; };
+		B025F2AA2FB51DA9001FC547 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		B025F2BC2FB51E44001FC547 /* RealityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealityKit.framework; path = System/Library/Frameworks/RealityKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		B025F28B2FB51C4D001FC547 /* Prothescan */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Prothescan;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B025F2862FB51C4D001FC547 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E49DE62FB66A6000890C88 /* RealityKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,7 +60,12 @@
 		B025F2802FB51C4D001FC547 = {
 			isa = PBXGroup;
 			children = (
-				B025F28B2FB51C4D001FC547 /* Prothescan */,
+				B025F29D2FB51DA9001FC547 /* ProstheScanApp.swift */,
+				B025F29C2FB51DA9001FC547 /* Models */,
+				B025F2A02FB51DA9001FC547 /* Stores */,
+				B025F2A22FB51DA9001FC547 /* Theme */,
+				B025F2AB2FB51DA9001FC547 /* Views */,
+				B025F2BB2FB51E43001FC547 /* Frameworks */,
 				B025F28A2FB51C4D001FC547 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +76,56 @@
 				B025F2892FB51C4D001FC547 /* Prothescan.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B025F29C2FB51DA9001FC547 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B025F2992FB51DA9001FC547 /* Patient.swift */,
+				B025F29A2FB51DA9001FC547 /* ScanRecord.swift */,
+				B025F29B2FB51DA9001FC547 /* ScanType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B025F2A02FB51DA9001FC547 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				B025F29E2FB51DA9001FC547 /* PatientStore.swift */,
+				B025F29F2FB51DA9001FC547 /* ScanManager.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		B025F2A22FB51DA9001FC547 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				B025F2A12FB51DA9001FC547 /* AppTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		B025F2AB2FB51DA9001FC547 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B025F2A32FB51DA9001FC547 /* AddPatientView.swift */,
+				B025F2A42FB51DA9001FC547 /* DeviceUnsupportedView.swift */,
+				B025F2A52FB51DA9001FC547 /* MeasurementsView.swift */,
+				B025F2A62FB51DA9001FC547 /* PatientDetailView.swift */,
+				B025F2A72FB51DA9001FC547 /* PatientListView.swift */,
+				B025F2A82FB51DA9001FC547 /* ScanCaptureView.swift */,
+				B025F2A92FB51DA9001FC547 /* ScanRowView.swift */,
+				B025F2AA2FB51DA9001FC547 /* ShareSheet.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B025F2BB2FB51E43001FC547 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B025F2BC2FB51E44001FC547 /* RealityKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +142,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				B025F28B2FB51C4D001FC547 /* Prothescan */,
 			);
 			name = Prothescan;
 			packageProductDependencies = (
@@ -119,6 +199,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B025F2AC2FB51DA9001FC547 /* ShareSheet.swift in Sources */,
+				B025F2AD2FB51DA9001FC547 /* ProstheScanApp.swift in Sources */,
+				B025F2AE2FB51DA9001FC547 /* ScanManager.swift in Sources */,
+				B025F2AF2FB51DA9001FC547 /* AppTheme.swift in Sources */,
+				B025F2B02FB51DA9001FC547 /* PatientListView.swift in Sources */,
+				B025F2B12FB51DA9001FC547 /* ScanCaptureView.swift in Sources */,
+				B025F2B22FB51DA9001FC547 /* ScanType.swift in Sources */,
+				B025F2B32FB51DA9001FC547 /* ScanRowView.swift in Sources */,
+				B025F2B42FB51DA9001FC547 /* DeviceUnsupportedView.swift in Sources */,
+				B025F2B52FB51DA9001FC547 /* PatientDetailView.swift in Sources */,
+				B025F2B62FB51DA9001FC547 /* MeasurementsView.swift in Sources */,
+				B025F2B72FB51DA9001FC547 /* ScanRecord.swift in Sources */,
+				B025F2B82FB51DA9001FC547 /* PatientStore.swift in Sources */,
+				B025F2B92FB51DA9001FC547 /* Patient.swift in Sources */,
+				B025F2BA2FB51DA9001FC547 /* AddPatientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,9 +348,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 798J6ZYKD6;
+				DEVELOPMENT_TEAM = NWJ46ND4LS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "ProstheScan uses the camera for 3D LiDAR object capture.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -266,7 +362,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.PMOTO.iphone.Prothescan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iphone.Prothescan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -285,9 +381,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 798J6ZYKD6;
+				DEVELOPMENT_TEAM = NWJ46ND4LS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "ProstheScan uses the camera for 3D LiDAR object capture.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -298,7 +395,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.PMOTO.iphone.Prothescan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iphone.Prothescan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
