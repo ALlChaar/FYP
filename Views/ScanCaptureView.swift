@@ -172,7 +172,7 @@ struct LiDARCaptureView: View {
                     .padding(.horizontal, 16)
                     .shadow(color: .black.opacity(0.6), radius: 4)
 
-                if let session = model.session, session.userCompletedScanPass {
+                if let session = model.session, canFinishNow(session: session) {
                     actionButton(title: "Finish", icon: "checkmark.circle.fill") {
                         session.finish()
                     }
@@ -343,6 +343,14 @@ struct LiDARCaptureView: View {
         }
 
         model.session = newSession
+    }
+
+    private func canFinishNow(session: ObjectCaptureSession) -> Bool {
+        if scanType.requiresFullScan {
+            return session.userCompletedScanPass
+        }
+        return session.userCompletedScanPass
+            || model.capturedCount >= scanType.minImagesForHalfScan
     }
 
     // MARK: - Image Count

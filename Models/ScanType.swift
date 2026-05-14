@@ -25,9 +25,21 @@ enum ScanType: String, CaseIterable, Identifiable, Codable {
 
     var instruction: String {
         switch self {
-        case .hand: return "Place the hand flat or in resting position. Walk slowly around it."
-        case .nose: return "Position the face forward. Slowly orbit the scanner around the nose."
-        case .ear:  return "Tilt the head sideways. Slowly orbit the scanner around the ear."
+        case .hand: return "Place the hand flat or in resting position. Walk a full 360° around it."
+        case .nose: return "Position the face forward. Slowly orbit 180° in front of the nose."
+        case .ear:  return "Tilt the head sideways. Slowly orbit 180° around the side of the head."
         }
     }
+
+    /// Hand requires a full 360° pass. Nose / ear are accessible from one side only,
+    /// so the user finishes after ~180° of coverage.
+    var requiresFullScan: Bool {
+        switch self {
+        case .hand: return true
+        case .nose, .ear: return false
+        }
+    }
+
+    /// Minimum image count before the user may tap Finish on a half-orbit scan.
+    var minImagesForHalfScan: Int { 12 }
 }
