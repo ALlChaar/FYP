@@ -194,9 +194,9 @@ struct HomeView: View {
     private var pastSessionsSection: some View {
         if !pastSessions.isEmpty {
             VStack(alignment: .leading, spacing: 12) {
-                sectionLabel("Past Scans", icon: "clock.arrow.circlepath")
+                sectionLabel("Past Scans  ·  swipe to delete", icon: "clock.arrow.circlepath")
 
-                VStack(spacing: 10) {
+                List {
                     ForEach(pastSessions) { session in
                         Button {
                             completedSession = session
@@ -204,10 +204,29 @@ struct HomeView: View {
                             pastSessionRow(session)
                         }
                         .buttonStyle(.plain)
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
+                        .listRowInsets(EdgeInsets(top: 5, leading: 0, bottom: 5, trailing: 0))
+                        .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                            Button(role: .destructive) {
+                                delete(session: session)
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                        }
                     }
                 }
+                .listStyle(.plain)
+                .scrollDisabled(true)
+                .scrollContentBackground(.hidden)
+                .frame(height: CGFloat(pastSessions.count) * 86)
             }
         }
+    }
+
+    private func delete(session: ScanSession) {
+        try? FileManager.default.removeItem(at: session.folder)
+        pastSessions.removeAll { $0.id == session.id }
     }
 
     private func pastSessionRow(_ session: ScanSession) -> some View {
@@ -264,6 +283,15 @@ struct HomeView: View {
                   let type = ScanType(rawValue: String(parts[0]))
             else { return nil }
 
+            // Auto-delete sessions that captured zero images. These are
+            // typically the result of cancelling out of the LiDAR view before
+            // a single frame was saved.
+            let imagesDir = url.appendingPathComponent("Images", isDirectory: true)
+            if !sessionHasImages(in: imagesDir) {
+                try? fm.removeItem(at: url)
+                return nil
+            }
+
             let label: String
             let dateString: String
             if parts.count == 3 {
@@ -282,6 +310,19 @@ struct HomeView: View {
         }
 
         pastSessions = sessions.sorted { $0.date > $1.date }
+    }
+
+    private func sessionHasImages(in imagesDir: URL) -> Bool {
+        let fm = FileManager.default
+        guard let enumerator = fm.enumerator(
+            at: imagesDir,
+            includingPropertiesForKeys: nil,
+            options: .skipsHiddenFiles
+        ) else { return false }
+        return enumerator.compactMap { $0 as? URL }.contains {
+            let ext = $0.pathExtension.lowercased()
+            return ext == "heic" || ext == "jpg" || ext == "jpeg"
+        }
     }
 
     private func sectionLabel(_ title: String, icon: String) -> some View {
